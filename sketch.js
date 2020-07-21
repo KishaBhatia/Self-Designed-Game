@@ -35,7 +35,7 @@ function setup() {
     coins.scale=0.8;
     coinsGroup.add(coins);
     //coins.setCollider("rectangle",0,0,coins.width,coins.height);
-  }
+  }  
 
   ground=createSprite(displayWidth-20,displayHeight/2+80);
   ground.addImage("ground",track_img);
@@ -72,9 +72,16 @@ function draw() {
   }
   player.velocityY=player.velocityY+0.5;
  
+  for(var k=0;k<coinsGroup.length;k++){
+    if(player.isTouching(coinsGroup.get(k))){
+      coinsGroup.get(k).destroy;
+    }
+  }
+
   textSize(30);
   textFont("Comic Sans MS");
   text("Score:"+count,displayWidth-200,displayHeight/2-300);
 
   drawSprites();
 }
+
