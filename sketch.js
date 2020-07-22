@@ -74,7 +74,7 @@ function draw() {
  
   for(var k=0;k<coinsGroup.length;k++){
     if(player.isTouching(coinsGroup.get(k))){
-      coinsGroup.get(k).destroy;
+      coinsGroup.get(k).destroy();
     }
   }
 
