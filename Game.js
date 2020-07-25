@@ -2,6 +2,7 @@ class Game{
     constructor(){}
 
     play(){
-        //image(track_img,0,400,displayWidth*5,80);
+        
+  image(background_img,-260,0,displayWidth*8,displayHeight/2);
     }
 }
