@@ -1,7 +1,8 @@
-class Game{
+/*class Game{
     constructor(){}
 
     play(){     
-        image(background_img,-260,0,displayWidth*8,displayHeight/2);
+        //imageMode(CENTER);
+        image(background_img,-width/2,0,width*5,height)
     }
-}
+}*/
