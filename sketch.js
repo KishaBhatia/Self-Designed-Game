@@ -97,31 +97,31 @@ function setup() {
   enemy=createSprite(displayWidth-20,displayHeight/2+100,40,40);
   enemy.addImage("enemy",enemy_img);
   enemy.scale=0.09;
-  //enemy.setCollider("rectangle",0,0,enemy.displayWidth-100,enemy.displayHeight-100);
+  enemy.setCollider("rectangle",0,0,enemy.displayWidth-100,enemy.displayHeight-100);
 
   enemy1=createSprite(2450,320,40,40);
   enemy1.addImage("enemy",enemy_img);
   enemy1.scale=0.09;
-  //enemy1.setCollider("rectangle",0,0,enemy.displayWidth-100,enemy.displayHeight-100);
+  enemy1.setCollider("rectangle",0,0,enemy.displayWidth-100,enemy.displayHeight-100);
 
   enemy2=createSprite(4950,300,40,40);
   enemy2.addImage("enemy",enemy_img);
   enemy2.scale=0.09;
-  //enemy2.setCollider("rectangle",0,0,enemy.displayWidth-100,enemy.displayHeight-100);
+  enemy2.setCollider("rectangle",0,0,enemy.displayWidth-100,enemy.displayHeight-100);
 
   //creating mario
   player=createSprite(displayWidth-2200,270);
   player.addImage("mario",player_img);
   player.scale=0.2;
-  //player.setCollider("rectangle",0,0,500,530);
+  player.setCollider("rectangle",0,0,500,530);
 
   //setting a collider for obstacles and blocks
   for(var i=0;i<obstacles.length;i++){
-    //obstacles[i].setCollider("rectangle",0,0,obstacles[i].displayWidth-100,obstacles[i].displayHeight-100);
+    obstacles[i].setCollider("rectangle",0,0,obstacles[i].displayWidth-100,obstacles[i].displayHeight-100);
     obstacles[i].visible=false  
   }
   for(var a=0;a<blocks.length;a++){
-    //blocks[a].setCollider("rectangle",0,0,blocks[a].displayWidth-50,blocks[a].displayHeight-30);
+    blocks[a].setCollider("rectangle",0,0,blocks[a].displayWidth-50,blocks[a].displayHeight-30);
     blocks[a].visible=false  
   }
 
@@ -131,7 +131,7 @@ function setup() {
     coins.addImage("coins",coin_img);
     coins.scale=0.8;
     coinsGroup.add(coins);
-    //coins.setCollider("rectangle",0,0,coins.displayWidth,coins.displayHeight);
+    coins.setCollider("rectangle",0,0,coins.displayWidth,coins.displayHeight);
   }  
 
   //ground sprites
@@ -146,13 +146,13 @@ function setup() {
   ground1.visible=false;
   ground2.visible=false;
 
-  /*ground.setCollider("rectangle",0,0,ground.displayWidth,ground.displayHeight-30);
+  ground.setCollider("rectangle",0,0,ground.displayWidth,ground.displayHeight-30);
   ground1.setCollider("rectangle",0,0,ground1.displayWidth,ground1.displayHeight-30);
-  ground2.setCollider("rectangle",0,0,ground2.displayWidth,ground2.displayHeight-30);*/
+  ground2.setCollider("rectangle",0,0,ground2.displayWidth,ground2.displayHeight-30);
 
   //flag sprite
   flag=createSprite(displayWidth*4.6,displayHeight/2+10,5,300);
-  //flag.setCollider("rectangle",0,0,flag.displayWidth,flag.displayHeight);
+  flag.setCollider("rectangle",0,0,flag.displayWidth,flag.displayHeight);
 
 }
 
@@ -246,7 +246,7 @@ function draw() {
     sound5.play();
   }
 
-  if(player.y>displayHeight/2-20){
+  if(player.y>displayHeight/2+200){
     textSize(60);
     textFont("Comic Sans MS");
     fill("purple");
